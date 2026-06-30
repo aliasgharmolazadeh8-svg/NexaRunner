@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>Settings</title>
+    <link rel="stylesheet" href="style.css">
+<style>
+    @media (max-width: 768px) {
+
+    .settingsContainer {
+        width: 95%;
+        margin: 20px auto;
+        padding: 10px;
+    }
+
+    .settingsBox {
+        padding: 15px;
+        border-radius: 12px;
+    }
+
+    h1 {
+        font-size: 22px;
+        text-align: center;
+    }
+
+    /* دکمه‌ها */
+    button {
+        width: 100%;
+        font-size: 18px;
+        padding: 12px;
+        margin-top: 10px;
+    }
+
+    /* input ها اگر داری */
+    input, select {
+        width: 100%;
+        font-size: 16px;
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+}
+</style>
+</head>
+<body>
+
+<div class="loginBox">
+
+    <h2>⚙️ تنظیمات حساب</h2>
+
+    <input type="text" id="newUsername" placeholder="نام کاربری جدید">
+    <input type="password" id="newPassword" placeholder="رمز عبور جدید">
+
+    <button id="saveBtn">ذخیره تغییرات</button>
+    <button id="backBtn" class="register">بازگشت</button>
+
+</div>
+<div class="footer">
+
+Powered by NeXA
+
+</div>
+<script src="settings.js"></script>
+</body>
+</html>

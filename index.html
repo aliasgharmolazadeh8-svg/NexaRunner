@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>NeXA Runner</title>
+
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* 📱 کلیات موبایل */
+@media (max-width: 768px) {
+
+    body {
+        padding: 10px;
+    }
+
+    .loginContainer {
+        width: 100%;
+        max-width: 350px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    input {
+        width: 100%;
+        font-size: 16px;
+        padding: 12px;
+        margin-bottom: 10px;
+    }
+
+    button {
+        width: 100%;
+        font-size: 18px;
+        padding: 12px;
+        margin-top: 10px;
+    }
+
+    h1 {
+        font-size: 22px;
+        text-align: center;
+    }
+}
+    </style>
+
+</head>
+
+<body>
+
+<div class="background">
+
+    <div class="blob blue"></div>
+
+    <div class="blob pink"></div>
+
+</div>
+
+<div class="loginBox">
+
+    <h1>🎮</h1>
+
+    <h2>NeXA Runner</h2>
+
+    <p>به بازی خوش اومدی</p>
+
+    <input
+    type="text"
+    id="username"
+    placeholder="نام کاربری">
+
+    <input
+    type="password"
+    id="password"
+    placeholder="رمز عبور">
+
+<button id="loginBtn">
+    ورود
+</button>
+
+<button id="registerBtn" class="register">
+    ثبت نام
+</button>
+
+</div>
+
+<div class="footer">
+
+Powered by NeXA
+
+</div>
+<script src="login.js"></script>
+</body>
+
+</html>

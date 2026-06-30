@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>NeXA Runner</title>
+
+<link rel="stylesheet" href="style.css">
+<style>
+    @media (max-width: 768px) {
+
+    /* 📦 کل صفحه بازی */
+    body {
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+    }
+
+    .gameContainer {
+        width: 100%;
+        padding: 5px;
+    }
+
+    /* 🎮 خود بازی */
+    #gameArea {
+        width: 100%;
+        height: 180px;   /* کوچیک‌تر برای موبایل */
+        position: relative;
+        overflow: hidden;
+        border-radius: 10px;
+    }
+
+    /* 🖼️ بک‌گراند */
+    #bg1, #bg2 {
+        width: 100%;
+        height: 100%;
+
+    }
+
+    /* 🦖 دایناسور */
+    #dino {
+        font-size: 32px;
+        right: 8%;
+        bottom: 15px;
+    }
+
+    /* 🌵 سخره */
+    #obstacle {
+        font-size: 28px;
+        bottom: 15px;
+    }
+
+    /* 🏆 امتیاز */
+    #scoreBoard {
+        font-size: 14px;
+        top: 5px;
+        right: 8px;
+    }
+
+    /* 🎮 پنل پایین */
+    .bottomPanel {
+        flex-direction: column;
+        gap: 8px;
+        align-items: center;
+    }
+
+    /* 🔘 دکمه‌ها */
+    button {
+        width: 100%;
+        font-size: 18px;
+        padding: 12px;
+    }
+
+    /* 👤 کارت کاراکتر و رکورد */
+    .characterCard,
+    .recordCard {
+        width: 100%;
+        text-align: center;
+    }
+}
+</style>
+
+</head>
+
+<body>
+    <div class="background">
+    <div class="blob blob1"></div>
+    <div class="blob blob2"></div>
+</div>
+<div class="gameContainer">
+
+    <h1 style="text-align: center;">🎮 NeXA Runner🎮</h1>
+
+    <h3 id="welcome" style="text-align: center;"></h3>
+
+<div id="gameArea">
+
+    <img src="images/jungle.png" id="bg1">
+
+    <img src="images/jungle.png" id="bg2">
+<div id="dino">🦖</div>
+<div id="obstacle">🌵</div>
+    <canvas id="gameCanvas" width="900" height="250"></canvas>
+
+</div>
+
+    <div class="bottomPanel">
+
+<div class="characterCard">
+
+    <div id="characterPreview" class="emojiCharacter">
+        🦖
+    </div>
+
+    <h3 id="characterName">T-Rex</h3>
+
+
+</div>
+
+<div id="scoreBoard">
+    Score: <span id="score">0</span>
+</div>
+
+        <div class="buttons">
+
+            <button id="startBtn">
+                ▶ شروع بازی
+            </button>
+
+            <button id="logoutBtn">
+                خروج
+            </button>
+
+        </div>
+
+        <div class="settings" id="settingsBtn">
+
+            ⚙️
+
+        </div>
+
+    </div>
+
+</div>
+<div class="footer">
+
+Powered by NeXA
+
+</div>
+
+<script src="game.js"></script>
+
+</body>
+
+</html>

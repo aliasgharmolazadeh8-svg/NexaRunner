@@ -1,0 +1,782 @@
+*{
+
+    margin:0;
+
+    padding:0;
+
+    box-sizing:border-box;
+
+    font-family:Lalezar;
+
+}
+
+body{
+
+    height:100vh;
+
+    overflow:hidden;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:#0f172a;
+
+}
+
+/* بک گراند */
+
+.background{
+
+    position:absolute;
+
+    width:100%;
+
+    height:100%;
+
+    overflow:hidden;
+
+}
+
+.blob{
+
+    position:absolute;
+
+    border-radius:50%;
+
+    filter:blur(120px);
+
+}
+
+.blue{
+
+    width:400px;
+
+    height:400px;
+
+    background:#4F8CFF;
+
+    top:-100px;
+
+    left:-100px;
+
+}
+
+.pink{
+
+    width:400px;
+
+    height:400px;
+
+    background:#FF4FD8;
+
+    bottom:-120px;
+
+    right:-120px;
+
+}
+
+/* فرم */
+
+.loginBox{
+
+    width:380px;
+
+    padding:40px;
+
+    border-radius:25px;
+
+    background:rgba(255,255,255,.08);
+
+    backdrop-filter:blur(20px);
+
+    border:1px solid rgba(255,255,255,.15);
+
+    box-shadow:0 15px 40px rgba(0,0,0,.4);
+
+    text-align:center;
+
+    color:white;
+
+    animation:show .8s;
+
+}
+
+@keyframes show{
+
+from{
+
+opacity:0;
+
+transform:scale(.8);
+
+}
+
+to{
+
+opacity:1;
+
+transform:scale(1);
+
+}
+
+}
+
+.loginBox h1{
+
+    font-size:60px;
+
+}
+
+.loginBox h2{
+
+    margin-top:10px;
+
+    font-size:30px;
+
+}
+
+.loginBox p{
+
+    color:#d7d7d7;
+
+    margin-bottom:25px;
+
+}
+
+/* Input */
+
+input{
+
+    width:100%;
+
+    height:50px;
+
+    margin-top:15px;
+
+    border:none;
+
+    outline:none;
+
+    border-radius:15px;
+
+    padding:15px;
+
+    font-size:16px;
+
+    background:rgba(255,255,255,.12);
+
+    color:white;
+
+}
+
+input::placeholder{
+
+    color:#ddd;
+
+}
+
+/* دکمه */
+
+button{
+
+    width:100%;
+
+    height:50px;
+
+    margin-top:20px;
+
+    border:none;
+
+    border-radius:15px;
+
+    cursor:pointer;
+
+    font-size:18px;
+
+    color:white;
+
+    background:linear-gradient(90deg,#4F8CFF,#FF4FD8);
+
+    transition:.3s;
+
+}
+
+button:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 0 25px #4F8CFF;
+
+}
+
+.register{
+
+    margin-top:12px;
+
+    background:transparent;
+
+    border:1px solid rgba(255,255,255,.2);
+
+}
+
+/* Powered */
+
+.footer{
+
+    position:fixed;
+
+    bottom:20px;
+
+    color:white;
+
+    transition:.3s;
+
+}
+
+.footer:hover{
+
+    transform:translateY(-8px) scale(1.15);
+
+    text-shadow:0 0 20px #4F8CFF;
+
+}
+.gameBox{
+
+    width:950px;
+
+    padding:30px;
+
+    border-radius:25px;
+
+    backdrop-filter:blur(20px);
+
+    background:rgba(255,255,255,.08);
+
+    border:1px solid rgba(255,255,255,.15);
+
+    text-align:center;
+
+    color:white;
+
+}
+
+canvas{
+
+    width:100%;
+
+    margin-top:25px;
+
+    background:white;
+
+    border-radius:15px;
+
+}
+/* ======= صفحه بازی ======= */
+
+.buttons{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:15px;
+
+    margin-top:20px;
+
+}
+
+#startBtn{
+
+    width:180px;
+
+    height:55px;
+
+}
+
+#logoutBtn{
+
+    width:120px;
+
+    height:45px;
+
+}
+.gameContainer{
+
+    width:95%;
+    max-width:1200px;
+
+    margin:auto;
+
+    padding:30px;
+
+    border-radius:25px;
+
+    backdrop-filter:blur(20px);
+
+    background:rgba(255,255,255,.08);
+
+    border:1px solid rgba(255,255,255,.1);
+
+    color:white;
+
+}
+
+canvas{
+
+    width:100%;
+    height:300px;
+
+    background:white;
+
+    border-radius:20px;
+
+    margin-top:25px;
+
+}
+
+.bottomPanel{
+
+    margin-top:30px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:20px;
+
+}
+
+.characterCard{
+
+    width:180px;
+
+    height:180px;
+
+    background:rgba(255,255,255,.08);
+
+    border-radius:20px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+.characterCard img{
+
+    width:90px;
+
+    height:90px;
+
+}
+
+#changeCharacter{
+
+    margin-top:15px;
+
+    width:150px;
+
+}
+
+.recordCard{
+
+    width:220px;
+
+    height:180px;
+
+    background:rgba(255,255,255,.08);
+
+    border-radius:20px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+#bestScore{
+
+    font-size:50px;
+
+    font-weight:bold;
+
+}
+
+.buttons{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:15px;
+
+}
+
+#startBtn{
+
+    width:220px;
+
+    height:60px;
+
+    border:none;
+
+    border-radius:15px;
+
+    background:linear-gradient(90deg,#4F8CFF,#FF4FD8);
+
+    color:white;
+
+    font-size:22px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+#logoutBtn{
+
+    width:220px;
+
+    height:50px;
+
+    border:none;
+
+    border-radius:15px;
+
+    background:#ff4d4d;
+
+    color:white;
+
+    cursor:pointer;
+
+}
+
+#startBtn:hover,
+#logoutBtn:hover{
+
+    transform:translateY(-5px);
+
+}
+
+.settings{
+
+    width:80px;
+
+    height:80px;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.08);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:35px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.settings:hover{
+
+    transform:translateY(-8px) scale(1.15);
+
+    text-shadow:0 0 20px #4F8CFF;
+
+}
+body{
+
+    background:#0f172a;
+
+    overflow-x:hidden;
+
+    position:relative;
+
+}
+
+/* بک گراند */
+.background{
+
+    position:fixed;
+
+    inset:0;
+
+    overflow:hidden;
+
+    z-index:-1;
+
+}
+
+/* توپ های نورانی */
+
+.blob{
+
+    position:absolute;
+
+    width:450px;
+
+    height:450px;
+
+    border-radius:50%;
+
+    filter:blur(120px);
+
+    opacity:.45;
+
+    animation:float 8s ease-in-out infinite;
+
+}
+
+/* آبی */
+
+.blob1{
+
+    background:#4F8CFF;
+
+    top:-120px;
+
+    left:-120px;
+
+}
+
+/* صورتی */
+
+.blob2{
+
+    background:#ff4fd8;
+
+    right:-120px;
+
+    bottom:-120px;
+
+    animation-delay:3s;
+
+}
+
+/* حرکت نرم */
+
+@keyframes float{
+
+    0%{
+
+        transform:translateY(0) scale(1);
+
+    }
+
+    50%{
+
+        transform:translateY(-35px) scale(1.08);
+
+    }
+
+    100%{
+
+        transform:translateY(0) scale(1);
+
+    }
+
+}
+.characterCard{
+
+    width:190px;
+
+    height:220px;
+
+    background:rgba(255,255,255,.08);
+
+    border-radius:20px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    transition:.3s;
+
+}
+
+.characterCard:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 0 20px rgba(79,140,255,.4);
+
+}
+
+.emojiCharacter{
+
+    font-size:90px;
+
+    transition:.4s;
+
+}
+
+#characterName{
+
+    color:white;
+
+    margin:10px 0;
+
+}
+
+#changeCharacter{
+
+    width:150px;
+
+    height:42px;
+
+    border:none;
+
+    border-radius:12px;
+
+    cursor:pointer;
+}
+#gameArea{
+
+    position:relative;
+
+    width:900px;
+
+    height:250px;
+
+    overflow:hidden;
+
+    border-radius:20px;
+
+    margin:auto;
+
+}
+
+#bg1,
+#bg2{
+
+    position:absolute;
+
+    top:0;
+
+    left:0;
+
+    width:900px;
+
+    height:250px;
+
+    object-fit:cover;
+
+}
+
+#bg2{
+
+    left:900px;
+
+}
+
+#gameCanvas{
+
+    position:absolute;
+
+    left:0;
+
+    top:0;
+
+    z-index:5;
+
+    background:transparent;
+
+}
+#gameArea{
+
+    position:relative;
+    width:900px;
+    height:250px;
+    overflow:hidden;
+}
+
+#bg1,
+#bg2{
+
+    position:absolute;
+    top:0;
+    width:900px;
+    height:250px;
+}
+
+#bg1{
+    left:0;
+}
+
+#bg2{
+    left:900px;
+}
+
+#gameCanvas{
+
+    position:absolute;
+    inset:0;
+    background:transparent;
+}
+#gameArea {
+    position: relative;
+    width: 900px;
+    height: 250px;
+    overflow: hidden;
+}
+
+#dino {
+    position: absolute;
+    bottom: 40px;
+    right: 80px;  /* 👈 به جای left */
+    font-size: 40px;
+}
+#obstacle {
+    position: absolute;
+    bottom: 20px;
+    right: -50px;
+    font-size: 35px;
+}
+#scoreBoard {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    z-index: 10;
+    color: #333;
+}
+#gameArea {
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+#gameArea:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 25px rgba(0, 150, 255, 0.5);
+}
+#scoreBoard {
+        transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+#scoreBoard:hover {
+        transform: scale(1.03);
+    box-shadow: 0 0 25px rgba(0, 150, 255, 0.5);
+}
+
